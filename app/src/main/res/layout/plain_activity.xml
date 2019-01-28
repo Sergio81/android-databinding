@@ -64,12 +64,12 @@
             android:contentDescription="@string/profile_avatar_cd"
             android:minHeight="48dp"
             android:minWidth="48dp"
-            app:DrawablePopularity="@"
             app:layout_constraintBottom_toTopOf="@+id/likes_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"
+            app:popularityIcon="@{viewmodel.popularity}" />
 
         <TextView
             android:id="@+id/likes"

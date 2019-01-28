@@ -92,9 +92,7 @@ object BindingAdapters {
         }
     }
 
-    @BindingAdapter("app:DrawablePopularity")
-    @JvmStatic
-    fun getDrawablePopularity(popularity: Popularity, context: Context): Drawable? {
+    private fun getDrawablePopularity(popularity: Popularity, context: Context): Drawable? {
         return when (popularity) {
             Popularity.NORMAL -> {
                 ContextCompat.getDrawable(context, R.drawable.ic_person_black_96dp)
