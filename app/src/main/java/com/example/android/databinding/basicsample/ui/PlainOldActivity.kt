@@ -48,20 +48,8 @@ class PlainOldActivity : AppCompatActivity() {
         val binding : PlainActivityBinding =
                 DataBindingUtil.setContentView(this, R.layout.plain_activity)
 
-        binding.name = "Your name"
-        binding.lastName = "Your last name"
+        binding.viewmodel = viewModel
 
-        // TODO: Explicitly setting initial values is a bad pattern. We'll fix that.
-        //updateName()
-        updateLikes()
-    }
-
-    /**
-     * This method is triggered by the `android:onclick` attribute in the layout. It puts business
-     * logic in the activity, which is not ideal. We should do something about that.
-     */
-    fun onLike(view: View) {
-        viewModel.onLike()
         updateLikes()
     }
 
